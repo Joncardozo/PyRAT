@@ -94,7 +94,7 @@ static PyObject* py_sarread(PyObject* self, PyObject* args)
   py_out = PyArray_SimpleNewFromData(ndims, dims,
 				     NPY_CFLOAT,
 				     output->array);
-  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_OWNDATA);
+  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_ARRAY_OWNDATA);
 
   free(output);
 
@@ -224,7 +224,7 @@ static PyObject* py_sar2rgb(PyObject* self, PyObject* args)
   py_out = PyArray_SimpleNewFromData(ndims, dims,
 				     NPY_UBYTE,
 				     rgb->array);
-  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_OWNDATA);
+  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_ARRAY_OWNDATA);
   free(rgb);
   sardata_free(input);
 
@@ -320,7 +320,7 @@ static PyObject* py_sarnlsar(PyObject* self, PyObject* args)
   py_out = PyArray_SimpleNewFromData(ndims, dims,
 				     NPY_CFLOAT,
 				     output->array);
-  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_OWNDATA);
+  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_ARRAY_OWNDATA);
 
   ndims = 2;
   dims[0] = look->M;
@@ -328,7 +328,7 @@ static PyObject* py_sarnlsar(PyObject* self, PyObject* args)
   py_look = PyArray_SimpleNewFromData(ndims, dims,
 				      NPY_FLOAT,
 				      look->array);
-  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_OWNDATA);
+  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_ARRAY_OWNDATA);
 
   if (sar_noise)
     sardata_free(sar_noise);
@@ -377,7 +377,7 @@ static PyObject* py_sarboxcar(PyObject* self, PyObject* args)
   py_out = PyArray_SimpleNewFromData(ndims, dims,
 				     NPY_CFLOAT,
 				     output->array);
-  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_OWNDATA);
+  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_ARRAY_OWNDATA);
 
   sardata_free(input);
   free(output);
@@ -423,7 +423,7 @@ static PyObject* py_sardiskcar(PyObject* self, PyObject* args)
 				     NPY_CFLOAT,
 				     output->array);
 
-  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_OWNDATA);
+  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_ARRAY_OWNDATA);
 
   sardata_free(input);
   free(output);
@@ -468,7 +468,7 @@ static PyObject* py_sargausscar(PyObject* self, PyObject* args)
   py_out = PyArray_SimpleNewFromData(ndims, dims,
 				     NPY_CFLOAT,
 				     output->array);
-  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_OWNDATA);
+  PyArray_ENABLEFLAGS((PyArrayObject *) py_out, NPY_ARRAY_OWNDATA);
 
   sardata_free(input);
   free(output);
