@@ -1,4 +1,12 @@
-# PyRAT (Python Radar Analysis Tools)
+# PyRAT (Python Radar Analysis Tools) - Development fork
+
+> [!IMPORTANT]
+
+> **Maintenance Note:**: This is a downstream fork of the original [PyRAT project](https://github.com/birgander2/PyRAT).
+
+> All improvements are intended to be contributed back to the upstream repository.
+
+# Introduction
 
 PyRat is a flexible framework for postprocessing synthetic aperture radar (SAR) data. It
 is made for both airborne and spaceborne data and especially focused on providing an
