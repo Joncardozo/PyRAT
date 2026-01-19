@@ -13,3 +13,4 @@ lxml
 scikit-image
 readline
 mako
+fftw
